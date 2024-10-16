@@ -5,6 +5,17 @@ body {
   height: 100vh;
 }
 
+.portfolio-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  color: hsl(200, 100%, 40%);
+  margin: 20px 0;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.3);
+  position: sticky;
+}
+
 .card-container {
   display: flex;
   justify-content: center;
@@ -136,4 +147,28 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  /* Center the icons */
+  gap: 20px;
+  /* Space between icons */
+  margin: 20px 0;
+  /* Margin above and below the icons */
+}
+
+.social-links a {
+  color: hsl(200, 100%, 40%);
+  /* Icon color */
+  font-size: 2rem;
+  /* Icon size */
+  transition: color 0.3s ease;
+  /* Transition for hover effect */
+}
+
+.social-links a:hover {
+  color: hsl(200, 100%, 60%);
+  /* Change color on hover */
 }
