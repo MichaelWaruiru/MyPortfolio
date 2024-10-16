@@ -6,9 +6,10 @@ function Card() {
   const [resumeUrl, setResumeUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [isUploading, setIsUploading] = useState(false);
-  const fileInputRef = useRef(null); // Reference for file input
+  const [isAdmin, setIsAdmin] = useState(false); // Add a state to check if user is admin
+  const fileInputRef = useRef(null);
 
-  // Load resume from local storage on component mount
+  // Simulate an admin authentication check (replace with real authentication logic)
   useEffect(() => {
     const savedResumeUrl = localStorage.getItem('resumeFileUrl');
     const savedResumeName = localStorage.getItem('resumeFileName');
@@ -16,12 +17,15 @@ function Card() {
       setResumeUrl(savedResumeUrl);
       setResumeFile({ name: savedResumeName });
     }
+
+    // Simulate checking for admin access, change this logic to your actual authentication
+    const userIsAdmin = true; // Replace with real admin check (could be based on token, session, etc.)
+    setIsAdmin(userIsAdmin); // Set to true only if admin
   }, []);
 
-  // Handle file upload with size validation
   const handleFileChange = async (event) => {
     const file = event.target.files[0];
-    const maxFileSize = 5 * 1024 * 1024; // 5 MB in bytes
+    const maxFileSize = 5 * 1024 * 1024;
 
     if (file) {
       if (file.size > maxFileSize) {
@@ -36,29 +40,28 @@ function Card() {
       try {
         const formData = new FormData();
         formData.append('file', file);
-        formData.append('upload_preset', 'do3ltyvk'); // Replace with your upload preset
+        formData.append('upload_preset', 'do3ltyvk'); // Replace with your Cloudinary's upload preset
         formData.append('resource_type', 'raw'); // Ensure resource type is 'raw' for non-image files
 
         const response = await axios.post(
-          'https://api.cloudinary.com/v1_1/dlcl4anlt/raw/upload', // Ensure 'raw' is used here
+          'https://api.cloudinary.com/v1_1/dlcl4anlt/raw/upload', 
           formData
         );
 
-      const fileUrl = response.data.secure_url;
-      setResumeFile(file);
-      setResumeUrl(fileUrl);
-      setErrorMessage('');
+        const fileUrl = response.data.secure_url;
+        setResumeFile(file);
+        setResumeUrl(fileUrl);
+        setErrorMessage('');
 
-      // Store file URL and name in local storage
-      localStorage.setItem('resumeFileUrl', fileUrl);
-      localStorage.setItem('resumeFileName', file.name);
+        // Store file URL and name in local storage
+        localStorage.setItem('resumeFileUrl', fileUrl);
+        localStorage.setItem('resumeFileName', file.name);
 
       } catch (error) {
         console.error('Upload error:', error.response ? error.response.data : error.message);
         setErrorMessage('Failed to upload file. Please try again.');
       } finally {
         setIsUploading(false);
-        // Clear the file input after successful upload
         if (fileInputRef.current) {
           fileInputRef.current.value = '';
         }
@@ -85,25 +88,30 @@ function Card() {
           <h2 className='card-title'>Michael Waruiru</h2>
           <p className='card-text'>Backend Developer</p>
         </div>
+
         <div className='description-container'>
-          <p className='description'>I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework)</p>
+          <p className='description'>
+            I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework)
+          </p>
 
-          {/* File upload section */}
-          <div className='upload-section'>
-            <label htmlFor="resume-upload">Upload Resume:</label>
-            <input
-              ref={fileInputRef}
-              type="file"
-              id="resume-upload"
-              accept=".pdf, .doc, .docx"
-              onChange={handleFileChange}
-              disabled={isUploading} // Disable input during upload
-            />
-            {isUploading && <p>Uploading...</p>}
-            {errorMessage && <p className="error-message" style={{ color: 'red' }}>{errorMessage}</p>}
-          </div>
+          {/* Only show the upload section if user is admin */}
+          {isAdmin && (
+            <div className='upload-section'>
+              <label htmlFor="resume-upload">Upload Resume:</label>
+              <input
+                ref={fileInputRef}
+                type="file"
+                id="resume-upload"
+                accept=".pdf, .doc, .docx"
+                onChange={handleFileChange}
+                disabled={isUploading}
+              />
+              {isUploading && <p>Uploading...</p>}
+              {errorMessage && <p className="error-message" style={{ color: 'red' }}>{errorMessage}</p>}
+            </div>
+          )}
 
-          {/* Display resume download link if a file is uploaded */}
+          {/* Display resume download link for all users */}
           {resumeUrl && (
             <div className='resume-link'>
               <p>Resume uploaded: {resumeFile?.name || localStorage.getItem('resumeFileName')}</p>
@@ -115,9 +123,13 @@ function Card() {
               >
                 Download Resume
               </a>
-              <br />
-              <br />
-              <button onClick={handleDeleteResume} className='delete-btn'>Delete Resume</button>
+              {isAdmin && (
+                <>
+                  <br />
+                  <br />
+                  <button onClick={handleDeleteResume} className='delete-btn'>Delete Resume</button>
+                </>
+              )}
             </div>
           )}
         </div>
