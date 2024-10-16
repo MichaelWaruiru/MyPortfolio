@@ -6,10 +6,10 @@ function Card() {
   const [resumeUrl, setResumeUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [isUploading, setIsUploading] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false); // Add a state to check if user is admin
+  const [isAdmin, setIsAdmin] = useState(false); // State to check if user is admin
   const fileInputRef = useRef(null);
 
-  // Simulate an admin authentication check (replace with real authentication logic)
+  // On component mount, check for admin access via URL query or localStorage
   useEffect(() => {
     const savedResumeUrl = localStorage.getItem('resumeFileUrl');
     const savedResumeName = localStorage.getItem('resumeFileName');
@@ -18,9 +18,17 @@ function Card() {
       setResumeFile({ name: savedResumeName });
     }
 
-    // Simulate checking for admin access, change this logic to your actual authentication
-    const userIsAdmin = true; // Replace with real admin check (could be based on token, session, etc.)
-    setIsAdmin(userIsAdmin); // Set to true only if admin
+    // Check URL query parameters for ?admin=true
+    const urlParams = new URLSearchParams(window.location.search);
+    const isAdminParam = urlParams.get('admin');
+
+    // If admin=true is in the URL or admin flag is set in localStorage
+    if (isAdminParam === 'true') {
+      setIsAdmin(true); // Grant admin access
+      localStorage.setItem('isAdmin', 'true'); // Persist admin access in local storage
+    } else if (localStorage.getItem('isAdmin') === 'true') {
+      setIsAdmin(true); // Restore admin access from local storage if previously granted
+    }
   }, []);
 
   const handleFileChange = async (event) => {
