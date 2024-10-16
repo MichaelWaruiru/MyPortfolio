@@ -1,9 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
+import axios from 'axios'; // To make HTTP requests
 
 function Card() {
   const [resumeFile, setResumeFile] = useState(null);
   const [resumeUrl, setResumeUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
+  const [isUploading, setIsUploading] = useState(false);
   const fileInputRef = useRef(null); // Reference for file input
 
   // Load resume from local storage on component mount
@@ -17,7 +19,7 @@ function Card() {
   }, []);
 
   // Handle file upload with size validation
-  const handleFileChange = (event) => {
+  const handleFileChange = async (event) => {
     const file = event.target.files[0];
     const maxFileSize = 5 * 1024 * 1024; // 5 MB in bytes
 
@@ -29,7 +31,20 @@ function Card() {
         return;
       }
 
-      const fileUrl = URL.createObjectURL(file);
+      setIsUploading(true);
+
+      try {
+        const formData = new FormData();
+        formData.append('file', file);
+        formData.append('upload_preset', 'do3ltyvk'); // Replace with your upload preset
+        formData.append('resource_type', 'raw'); // Ensure resource type is 'raw' for non-image files
+
+        const response = await axios.post(
+          'https://api.cloudinary.com/v1_1/dlcl4anlt/raw/upload', // Ensure 'raw' is used here
+          formData
+        );
+
+      const fileUrl = response.data.secure_url;
       setResumeFile(file);
       setResumeUrl(fileUrl);
       setErrorMessage('');
@@ -38,9 +53,15 @@ function Card() {
       localStorage.setItem('resumeFileUrl', fileUrl);
       localStorage.setItem('resumeFileName', file.name);
 
-      // Clear the file input after successful upload
-      if (fileInputRef.current) {
-        fileInputRef.current.value = '';
+      } catch (error) {
+        console.error('Upload error:', error.response ? error.response.data : error.message);
+        setErrorMessage('Failed to upload file. Please try again.');
+      } finally {
+        setIsUploading(false);
+        // Clear the file input after successful upload
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
       }
     }
   };
@@ -76,7 +97,9 @@ function Card() {
               id="resume-upload"
               accept=".pdf, .doc, .docx"
               onChange={handleFileChange}
+              disabled={isUploading} // Disable input during upload
             />
+            {isUploading && <p>Uploading...</p>}
             {errorMessage && <p className="error-message" style={{ color: 'red' }}>{errorMessage}</p>}
           </div>
 
