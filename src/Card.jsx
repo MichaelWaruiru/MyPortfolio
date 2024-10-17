@@ -101,7 +101,11 @@ function Card() {
 
         <div className='description-container'>
           <p className='description'>
-            I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework)
+            I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework).
+            <br />
+            Sometimes I train models, mentally! I am a Machine Learning enthusiast because the future is AI. AIn't it? (See what I did there?😎)
+            <br />
+            And no, I am not a  JavaScript fan but here I am with React😁
           </p>
 
           {/* Only show the upload section if user is admin */}
@@ -143,19 +147,6 @@ function Card() {
             </div>
           )}
         </div>
-      </div>
-
-      <div className="social-links">
-        <a href="https://github.com/MichaelWaruiru" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="hsl(200, 100%, 40%)" viewBox="0 0 24 24" width="40" height="40">
-            <path d="M12 .3c-6.627 0-12 5.373-12 12 0 5.304 3.438 9.8 8.205 11.388.6.111.82-.26.82-.577 0-.284-.01-1.233-.014-2.241-3.338.726-4.048-1.607-4.048-1.607-.546-1.384-1.333-1.754-1.333-1.754-1.089-.743.083-.728.083-.728 1.205.085 1.837 1.237 1.837 1.237 1.07 1.834 2.807 1.302 3.492.996.109-.774.42-1.302.764-1.6-2.665-.303-5.467-1.333-5.467-5.93 0-1.311.467-2.384 1.236-3.22-.124-.303-.536-1.53.117-3.182 0 0 1.008-.322 3.303 1.227.958-.266 1.988-.399 3.004-.403 1.016.004 2.046.137 3.004.403 2.295-1.549 3.303-1.227 3.303-1.227.653 1.652.242 2.879.118 3.182.77.836 1.236 1.909 1.236 3.22 0 4.61-2.805 5.623-5.477 5.923.43.371.815 1.1.815 2.22 0 1.604-.014 2.895-.014 3.283 0 .317.218.692.825.577A12.004 12.004 0 0024 12.3c0-6.627-5.373-12-12-12" />
-          </svg>
-        </a>
-        <a href="https://www.linkedin.com/in/MichaelWaruiru" target="_blank" rel="noopener noreferrer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="hsl(200, 100%, 40%)" viewBox="0 0 24 24" width="40" height="40">
-            <path d="M19 0H5C2.25 0 0 2.25 0 5v14c0 2.75 2.25 5 5 5h14c2.75 0 5-2.25 5-5V5c0-2.75-2.25-5-5-5zM7.5 20H4.5V9h3v11zm-1.5-12.75c-1 0-1.5-.75-1.5-1.5s.5-1.5 1.5-1.5 1.5.75 1.5 1.5-.5 1.5-1.5 1.5zm15 12.75h-3v-5.5c0-1.5-.5-2.5-1.75-2.5-1.25 0-1.75 1-1.75 2.5v5.5h-3v-11h3v1.5c.5-1 1.5-2 3.25-2 2.5 0 4.25 1.75 4.25 5.5v6.5z"/>
-          </svg>
-        </a>
       </div>
     </>
   );
