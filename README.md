@@ -10,3 +10,6 @@ Currently, two official plugins are available:
 
 ## NOTE
 For Admin access to upload and delete files, make sure you use "?admin=true" after your URL i.e if it is "https://localhost:5173/?admin=true"
+
+## ISSUES
+I don't know if it's my browser but the difference between production and local development code is astonishing. There's a solution being worked on though
