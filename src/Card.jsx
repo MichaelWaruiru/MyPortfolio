@@ -91,7 +91,6 @@ function Card() {
   return (
     <>
       <h1 className="portfolio-heading">My Portfolio</h1>
-      <hr />
       <div className='card-container'>
         <div className='card'>
           <img className='profile-pic' src="/src/assets/profile.jpg" alt="Profile Picture" />
