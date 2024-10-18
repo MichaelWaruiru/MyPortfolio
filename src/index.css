@@ -2,7 +2,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  height: 130vh;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 .portfolio-heading {
@@ -13,10 +14,11 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.3);
-  position: sticky;
-  /* top: 0;
+  position: fixed;
+  top: 0;
   left: 0;
-  right: 0; */
+  width: 100%;
+  z-index: 1000;
   background-color: hsl(0, 62%, 85%);
   padding: 20px;
 }
@@ -32,19 +34,18 @@ body {
 .card {
   text-align: center;
   margin: 15px;
+  margin-top: 80px;
   border: 1px solid hsl(0, 15%, 87%);
   padding: 20px;
   clip-path: circle(50% at 0 0);
   transition: all 1s ease;
   background-color: hsl(160, 100%, 75%);
   width: 150px;
-  /* border-radius: 50%; */
   box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.514);
   display: inline-block;
 }
 
 .description-container {
-  /* display: inline-block; */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,29 +57,32 @@ body {
   align-items: center;
   margin: 10px;
   border: 1px solid hsl(0, 15%, 87%);
+  border-radius: 16px;
   padding: 20px;
   /* clip-path: circle(50% at 0 0); */
-  transition: all 2s ease;
+  transition: all 2.5s ease;
+  transform: translateY(-20px);
   background-color: hsl(300, 100%, 25%);
   color: black;
   box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.514);
-  /* height: 256px; */
-  /* transform: rotateY(-50deg); */
   font-size: large;
   font-style: italic;
   font-weight: bold;
-  margin-top: 20px;
-  margin-right: 10px;
+  margin-top: 90px;
 }
 
 .card:hover, .description:hover {
   clip-path: circle(100%);
 }
 
+/* On card hover, move the description down */
+.card:hover+.description-container .description {
+  transform: translateY(0);
+}
+
 .card .card-title {
   font-family: Arial, Helvetica, sans-serif;
   color: hsl(0, 0%, 20%);
-  /* margin-top: 10px; */
   margin-bottom: -15px;
 }
 
@@ -149,7 +153,7 @@ footer {
   text-align: center;
   color: white;
   padding: 10px;
-  position: fixed;
+  position: relative;
   bottom: 0;
   width: 100%;
 }
@@ -169,4 +173,25 @@ footer {
 
 .social-links a:hover {
   color: hsl(200, 100%, 60%);
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 80%;
+  }
+
+    .description {
+      margin-top: 10px;
+    }
+}
+
+/* Smaller negative value on large screens */
+@media screen and (min-width: 1024px) {
+  .description {
+    transform: translateY(-10px);
+  }
 }
