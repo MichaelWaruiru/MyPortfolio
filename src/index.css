@@ -20,7 +20,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.3);
-  position: relative; /*Fixed position is affecting footer*/
+  position: fixed; /*Fixed position is affecting footer*/
   top: 0;
   left: 0;
   width: 100%;
