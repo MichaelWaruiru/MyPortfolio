@@ -97,7 +97,7 @@ function Card() {
       <h1 className="portfolio-heading">My Portfolio</h1>
       <div className='card-container'>
         <div className='card'>
-          <img className='profile-pic' src="/public/profile.jpg" alt="Profile Picture" />
+          <img className='profile-pic' src="/assets/profile.jpg" alt="Profile Picture" />
           <h2 className='card-title'>Michael Waruiru</h2>
           <p className='card-text'>Backend Developer</p>
         </div>
