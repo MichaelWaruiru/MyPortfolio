@@ -94,15 +94,16 @@ function Card() {
 
   return (
     <>
-      <h1 className="portfolio-heading">My Portfolio</h1>
+      <header>
+        <h1 className="portfolio-heading">My Portfolio</h1>
+      </header>
       <div className='card-container'>
         <div className='card'>
           <img className='profile-pic' src="/assets/profile.jpg" alt="Profile Picture" />
           <h2 className='card-title'>Michael Waruiru</h2>
           <p className='card-text'>Backend Developer</p>
         </div>
-
-        <div className='description-container'>
+         <div className='description-container'>
           <p className='description'>
             I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework).
             <br />
