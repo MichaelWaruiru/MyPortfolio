@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useRef, useState } from 'react';
 import axios from 'axios'; // To make HTTP requests
 
 function Card() {
@@ -7,7 +7,9 @@ function Card() {
   const [errorMessage, setErrorMessage] = useState('');
   const [isUploading, setIsUploading] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false); 
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const fileInputRef = useRef(null);
+  const contactSectionRef = useRef(null);
 
   // On component mount, check if the user is admin
   useEffect(() => {
@@ -92,10 +94,34 @@ function Card() {
     // If you want, send a request to delete the file from Cloudinary
   };
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const scrollToContact = () => {
+    if (contactSectionRef.current) {
+      contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false);
+    }
+  };
+
   return (
     <>
       <header>
         <h1 className="portfolio-heading">My Portfolio</h1>
+        {/* <button onClick={toggleMenu} className="menu-toggle-btn">
+          Menu
+        </button>
+        {isMenuOpen && (
+          <>
+            <div className="menu">
+              <button onClick={scrollToContact}>Contact</button>
+            </div>
+            <div className="menu">
+              <button>About</button>
+            </div>
+          </>
+        )} */}
       </header>
       <div className='card-container'>
         <div className='card'>
@@ -149,6 +175,14 @@ function Card() {
             </div>
           )}
         </div>
+      </div>
+
+      <div ref={contactSectionRef} className="contact-section">
+        <h2>Contact</h2>
+        <p>Feel free to reach out to me via the contact details below:</p>
+        <p>Email: <a href="mailto:michaelwaruiru@gmail.com">michaelwaruiru@gmail.com</a></p>
+        {/* <p>LinkedIn: <a href="https://www.linkedin.com/in/michaelwaruiru" target="_blank" rel="noopener noreferrer">Michael Waruiru</a></p> */}
+        <p>Phone Number: +254 719 453 367</p>
       </div>
     </>
   );

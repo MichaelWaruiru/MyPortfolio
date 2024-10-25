@@ -183,6 +183,31 @@ footer {
   color: hsl(200, 100%, 60%);
 }
 
+.menu-toggle-btn {
+  cursor: pointer;
+  margin-top: 90px;
+  margin-left: 5px;
+}
+
+.menu {
+  background-color: #f0f0f0;
+  padding: 2px;
+  width: 150px;
+  margin-left: 10px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.contact-section {
+  padding: 1rem;
+  background-color: hsl(120, 67%, 76%);
+  text-align: center;
+  margin: 30px 15px 30px 15px;
+  border-radius: 15px;
+  border: 1px solid hsl(0, 2%, 55%);
+  font-size: 18px;
+}
+
 @media screen and (max-width: 768px) {
   .card-container {
     flex-direction: column;
