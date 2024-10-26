@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://michaelwaruiru.netlify.app/sitemap.xml
