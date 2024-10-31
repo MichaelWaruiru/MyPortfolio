@@ -20,9 +20,7 @@ body {
   text-transform: uppercase;
   font-weight: bold;
   text-shadow: 2px 2px 4px hsla(0, 0%, 0%, 0.3);
-  position: fixed; /*Fixed position is affecting footer*/
-  top: 0;
-  left: 0;
+  position: fixed;
   width: 100%;
   z-index: 1000;
   background-color: hsl(0, 62%, 85%);
@@ -64,7 +62,7 @@ body {
   border-radius: 16px;
   padding: 20px;
   /* clip-path: circle(50% at 0 0); */
-  transition: all 2.5s ease;
+  transition: all 1s ease;
   transform: translateY(-20px);
   background-color: hsl(300, 100%, 25%);
   color: black;
@@ -183,24 +181,9 @@ footer {
   color: hsl(200, 100%, 60%);
 }
 
-.menu-toggle-btn {
-  cursor: pointer;
-  margin-top: 90px;
-  margin-left: 5px;
-}
-
-.menu {
-  background-color: #f0f0f0;
-  padding: 2px;
-  width: 150px;
-  margin-left: 10px;
-  margin-top: 5px;
-  text-align: center;
-}
-
 .contact-section {
   padding: 1rem;
-  background-color: hsl(120, 67%, 76%);
+  background-color: hsl(120, 76%, 53%);
   text-align: center;
   margin: 30px 15px 30px 15px;
   border-radius: 15px;
@@ -219,6 +202,11 @@ footer {
 
     .description {
       margin-top: 10px;
+      clip-path: circle(38% at 0 0);
+    }
+
+    .description:hover{
+      clip-path: circle(100%);
     }
 }
 
