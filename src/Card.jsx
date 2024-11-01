@@ -25,21 +25,21 @@ function Card() {
       setIsAdmin(true); 
     }
 
-    // // Fetch the resume URL from a persistent storage (Cloudinary or external API)
-    // const fetchResumeUrl = async () => {
-    //   try {
-    //     // Assuming Cloudinary already holds the latest resume URL (you can store and retrieve from your backend if necessary)
-    //     const savedResumeUrl = "https://res.cloudinary.com/dlcl4anlt/raw/upload/v1628600243/sample_resume.pdf"; // Replace with actual fetching logic
-    //     if (savedResumeUrl) {
-    //       setResumeUrl(savedResumeUrl);
-    //       setResumeFile({ name: 'Uploaded Resume' });
-    //     }
-    //   } catch (error) {
-    //     console.error('Error fetching resume:', error);
-    //   }
-    // };
+    // Fetch the resume URL from a persistent storage (Cloudinary or external API)
+    const fetchResumeUrl = async () => {
+      try {
+        // Assuming Cloudinary already holds the latest resume URL (you can store and retrieve from your backend if necessary)
+        const savedResumeUrl = "https://res.cloudinary.com/dlcl4anlt/raw/upload/v1628600243/sample_resume.pdf"; // Replace with actual fetching logic
+        if (savedResumeUrl) {
+          setResumeUrl(savedResumeUrl);
+          setResumeFile({ name: 'Uploaded Resume' });
+        }
+      } catch (error) {
+        console.error('Error fetching resume:', error);
+      }
+    };
 
-    // fetchResumeUrl();
+    fetchResumeUrl();
   }, []);
 
   const handleFileChange = async (event) => {
@@ -66,6 +66,7 @@ function Card() {
           'https://api.cloudinary.com/v1_1/dlcl4anlt/raw/upload',
           formData
         );
+        console.log(file)
 
         // Get the URL of the uploaded file
         const fileUrl = response.data.secure_url;
