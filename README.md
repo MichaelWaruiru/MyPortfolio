@@ -12,4 +12,4 @@ Currently, two official plugins are available:
 For Admin access to upload and delete files, make sure you use "?admin=true" after your URL i.e if it is "https://localhost:5173/?admin=true"
 
 ## ISSUES
-The link in cloudinary cannot be deleted or downloaded
+The link in cloudinary cannot be deleted or downloaded. Solution in progress albeit
