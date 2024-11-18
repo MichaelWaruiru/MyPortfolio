@@ -40,12 +40,13 @@ body {
   margin-top: 80px;
   border: 1px solid hsl(0, 15%, 87%);
   padding: 20px;
-  clip-path: circle(50% at 0 0);
+  /* clip-path: circle(50% at 0 0); */
   transition: all 1s ease;
   background-color: hsl(160, 100%, 75%);
-  width: 150px;
+  width: 178px;
   box-shadow: 5px 5px 5px hsla(0, 0%, 20%, 0.514);
   display: inline-block;
+  border-radius: 50%;
 }
 
 .description-container {
