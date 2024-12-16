@@ -99,6 +99,7 @@ function Card() {
         <div className='card'>
           <img className='profile-pic' src="/assets/profile.jpg" alt="Profile Picture" />
           <h2 className='card-title'>Michael Waruiru</h2>
+          <br />
           <p className='card-text'>Backend Developer</p>
         </div>
          <div className='description-container'>
