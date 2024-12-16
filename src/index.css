@@ -230,6 +230,11 @@ footer {
     top: 0;
     z-index: 1000;
   }
+
+  .navbar-nav {
+    /* justify-content: center; */
+    gap: 40px;
+  }
 }
 
 nav {
@@ -238,6 +243,11 @@ nav {
 
 .navbar {
   z-index: 1000;
+}
+
+.nav-link {
+  padding: 10px 20px; /* Add padding to ensure links are equally spaced */
+  font-size: 1rem;
 }
 
 /* Highlight active link */
