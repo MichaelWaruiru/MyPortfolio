@@ -219,6 +219,7 @@ footer {
 @media screen and (min-width: 1024px) {
   .description {
     transform: translateY(-10px);
+    margin-top: 160px;
   }
 }
 
@@ -232,7 +233,7 @@ footer {
 }
 
 nav {
-  margin-top: 90px;
+  margin-top: 88px;
 }
 
 .navbar {
@@ -243,7 +244,6 @@ nav {
 .nav-link.active {
   font-weight: bold;
   color: #ffc107 !important;
-  /* Bootstrap's warning color */
 }
 
 #jumpToTop {
