@@ -6,10 +6,8 @@ function Card() {
   const [resumeUrl, setResumeUrl] = useState(null);
   const [errorMessage, setErrorMessage] = useState('');
   const [isUploading, setIsUploading] = useState(false);
-  const [isAdmin, setIsAdmin] = useState(false); 
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(false);
   const fileInputRef = useRef(null);
-  const contactSectionRef = useRef(null);
 
   // On component mount, check if the user is admin
   useEffect(() => {
@@ -95,35 +93,8 @@ function Card() {
     // If you want, send a request to delete the file from Cloudinary
   };
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const scrollToContact = () => {
-    if (contactSectionRef.current) {
-      contactSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
-    }
-  };
-
   return (
     <>
-      <header>
-        <h1 className="portfolio-heading">My Portfolio</h1>
-        {/* <button onClick={toggleMenu} className="menu-toggle-btn">
-          Menu
-        </button>
-        {isMenuOpen && (
-          <>
-            <div className="menu">
-              <button onClick={scrollToContact}>Contact</button>
-            </div>
-            <div className="menu">
-              <button>About</button>
-            </div>
-          </>
-        )} */}
-      </header>
       <div className='card-container'>
         <div className='card'>
           <img className='profile-pic' src="/assets/profile.jpg" alt="Profile Picture" />
@@ -178,7 +149,24 @@ function Card() {
         </div>
       </div>
 
-      <div ref={contactSectionRef} className="contact-section">
+      <div className="about-section" id="about">
+        <h2>About</h2>
+        <p>Content about me</p>
+      </div>
+
+      <div className="services-section" id="services">
+        <h2>Services</h2>
+        <p>M-Pesa Intergrations</p>
+        <p>Websites Authentication & Security</p>
+        <p>Database Architecture, manipulation & Management</p>
+      </div>
+
+      <div className="projects-section" id="projects">
+        <h2>Projects</h2>
+        <p>Projects completed</p>
+      </div>
+
+      <div className="contact-section" id="contact">
         <h2>Contact</h2>
         <p>Feel free to reach out to me via the contact details below:</p>
         <p>Email: <a href="mailto:michaelwaruiru@gmail.com">michaelwaruiru@gmail.com</a></p>
