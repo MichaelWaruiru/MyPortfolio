@@ -31,7 +31,7 @@ function Navbar() {
   const handleScroll = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      const offset = 170; // Value to match the navbar height
+      const offset = 170; // Value to match the navbar height to enable smooth scrolling when link is clicked on menu
        const elementPosition = element.getBoundingClientRect().top + window.scrollY;
       const offsetPosition = elementPosition - offset;
       
@@ -76,7 +76,7 @@ function Navbar() {
                     handleScroll('about');
                   }}
                 >
-                  About
+                  About Me
                 </a>
               </li>
               <li className="nav-item">
