@@ -23,7 +23,7 @@ function Card() {
       setIsAdmin(true); 
     }
 
-    // Fetch the resume URL from a persistent storage (Cloudinary or external API)
+    // Fetch the resume URL from Cloudinary
     const fetchResumeUrl = async () => {
       try {
         // Assuming Cloudinary already holds the latest resume URL (you can store and retrieve from your backend if necessary)
@@ -111,7 +111,7 @@ function Card() {
             And no, I am not a  JavaScript fan but here I am with React😁
           </p>
 
-          {isAdmin && (
+          {/* {isAdmin && (
             <div className='upload-section'>
               <label htmlFor="resume-upload">Upload Resume:</label>
               <input
@@ -146,25 +146,84 @@ function Card() {
                 </>
               )}
             </div>
-          )}
+          )} */}
         </div>
       </div>
 
       <div className="about-section" id="about">
-        <h2>About</h2>
-        <p>Content about me</p>
+        <h2>About Me</h2>
+        <p>Hi, I am <strong>Michael Waruiru,</strong> a <strong>backend developer,</strong> based in Nairobi, Kenya.</p>
+        <p><strong>Backend Expertise</strong> which reflects my mastery in building robust, scalable, and efficient solutions. My technical proficiency spans across programming languages like <strong>Go/Golang</strong> and <strong>Python</strong>, where I leverage frameworks such as Django and Flask to create seamless web applications.</p>
+        <p>My curiosity and drive extend beyond backend systems—I'm an enthusiastic <strong>Machine Learning</strong> explorer who enjoys tackling challenges with data-driven insights. While my primary focus lies in backend technologies, I also take pride in stepping into front-end frameworks like React, Vanilla Javascript, HTML and CSS to craft complete, well-rounded applications.</p>
+        <p>I find joy in solving real-world problems, mentoring, and constantly learning to stay ahead in the fast-evolving tech landscape. Whether it's designing secure database architectures or integrating APIs for services like M-Pesa, my goal is always to deliver solutions that empower businesses and individuals alike.</p>
+        <p>Outside the world of coding, I live!</p>
       </div>
 
       <div className="services-section" id="services">
         <h2>Services</h2>
         <p>M-Pesa Intergrations</p>
         <p>Websites Authentication & Security</p>
-        <p>Database Architecture, manipulation & Management</p>
+        <p>Database Architecture, Manipulation & Management</p>
       </div>
 
       <div className="projects-section" id="projects">
         <h2>Projects</h2>
-        <p>Projects completed</p>
+        <div className="project-card">
+          <div>
+            <a 
+            href="https://github.com/MichaelWaruiru/SaccoManagement"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="project-link"
+          >
+            Sacco Management
+          </a>
+          <p>A system for managing PSVs, Sacco members like drivers, managers and route marshals, passengers and fare.</p>
+          </div>
+
+          <div>
+            <a 
+              href="https://github.com/MichaelWaruiru/LibraryProcess"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              Library System
+            </a>
+            <p>
+              A system for intergrating with a school system to run all activities that happen in a library like managing catalogues and book borrowing.
+            </p>
+          </div>
+
+          <div>
+            <a 
+              href="https://github.com/MichaelWaruiru/ecommerce"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              E-Commerce
+            </a>
+            <p>
+              A website where admin users can add items with email and mpesa intergration.
+            </p>
+          </div>
+
+          <div>
+            <a 
+              href="https://github.com/MichaelWaruiru/qr-scanner"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-link"
+            >
+              QR Scanner
+            </a>
+            <p>
+              A project where users can scan a QR Code sending an OTP for M-Pesa payment.
+            </p>
+          </div>
+      
+        </div>
       </div>
 
       <div className="contact-section" id="contact">
@@ -172,7 +231,7 @@ function Card() {
         <p>Feel free to reach out to me via the contact details below:</p>
         <p>Email: <a href="mailto:michaelwaruiru@gmail.com">michaelwaruiru@gmail.com</a></p>
         {/* <p>LinkedIn: <a href="https://www.linkedin.com/in/michaelwaruiru" target="_blank" rel="noopener noreferrer">Michael Waruiru</a></p> */}
-        <p>Phone Number: +254 719 453 367</p>
+        {/* <p>Phone Number: +254 719 453 367</p> */}
       </div>
     </>
   );
