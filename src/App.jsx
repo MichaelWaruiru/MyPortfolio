@@ -2,6 +2,7 @@ import Card from "./Card"
 import Footer from "./Footer"
 import JumpToTop from "./JumpToTop"
 import Navbar from "./Navbar"
+import WhatsAppChat from "./WhatsAppChat"
 
 function App() {
  return(
@@ -10,6 +11,7 @@ function App() {
     <Card />
     <Footer/>
     <JumpToTop/>
+    <WhatsAppChat/>
   </>
  )
 }
