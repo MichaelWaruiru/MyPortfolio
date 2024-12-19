@@ -153,7 +153,7 @@ function Card() {
       <div className="about-section" id="about">
         <h2>About Me</h2>
         <p>Hi, I am <strong>Michael Waruiru,</strong> a <strong>backend developer,</strong> based in Nairobi, Kenya.</p>
-        <p><strong>Backend Expertise</strong> which reflects my mastery in building robust, scalable, and efficient solutions. My technical proficiency spans across programming languages like <strong>Go/Golang</strong> and <strong>Python</strong>, where I leverage frameworks such as Django and Flask to create seamless web applications.</p>
+        <p>I have<strong> backend expertise</strong> which reflects my mastery in building robust, scalable, and efficient solutions. My technical proficiency spans across programming languages like <strong>Go/Golang</strong> and <strong>Python</strong>, where I leverage frameworks such as Django and Flask to create seamless web applications.</p>
         <p>My curiosity and drive extend beyond backend systems—I'm an enthusiastic <strong>Machine Learning</strong> explorer who enjoys tackling challenges with data-driven insights. While my primary focus lies in backend technologies, I also take pride in stepping into front-end frameworks like React, Vanilla Javascript, HTML and CSS to craft complete, well-rounded applications.</p>
         <p>I find joy in solving real-world problems, mentoring, and constantly learning to stay ahead in the fast-evolving tech landscape. Whether it's designing secure database architectures or integrating APIs for services like M-Pesa and Twilio, my goal is always to deliver solutions that empower businesses and individuals alike.</p>
         <p>Outside the world of coding, I live!</p>
