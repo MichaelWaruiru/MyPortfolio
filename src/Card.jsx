@@ -168,63 +168,78 @@ function Card() {
 
       <div className="projects-section" id="projects">
         <h2>Projects</h2>
-        <div className="project-card">
-          <div>
-            <a 
-            href="https://github.com/MichaelWaruiru/SaccoManagement"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="project-link"
-          >
-            Sacco Management
-          </a>
-          <p>A system for managing PSVs, Sacco members like drivers, managers and route marshals, passengers and fare.</p>
+        <div id="projectsCarousel" className="carousel slide" data-bs-ride="carousel">
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div className="project-card">
+                <a 
+                  href="https://github.com/MichaelWaruiru/SaccoManagement"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  Sacco Management
+                </a>
+                <p>A system for managing PSVs, Sacco members like drivers, managers, and route marshals, passengers, and fare.</p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="project-card">
+                <a 
+                  href="https://github.com/MichaelWaruiru/LibraryProcess"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  Library System
+                </a>
+                <p>
+                  A system for integrating with a school system to run all activities that happen in a library like managing catalogues and book borrowing.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="project-card">
+                <a 
+                  href="https://github.com/MichaelWaruiru/ecommerce"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  E-Commerce
+                </a>
+                <p>
+                  A website where admin users can add items with email and M-Pesa integration.
+                </p>
+              </div>
+            </div>
+            <div className="carousel-item">
+              <div className="project-card">
+                <a 
+                  href="https://github.com/MichaelWaruiru/qr-scanner"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="project-link"
+                >
+                  QR Scanner
+                </a>
+                <p>
+                  A project where users can scan a QR Code sending an OTP for M-Pesa payment.
+                </p>
+              </div>
+            </div>
           </div>
-
-          <div>
-            <a 
-              href="https://github.com/MichaelWaruiru/LibraryProcess"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              Library System
-            </a>
-            <p>
-              A system for intergrating with a school system to run all activities that happen in a library like managing catalogues and book borrowing.
-            </p>
-          </div>
-
-          <div>
-            <a 
-              href="https://github.com/MichaelWaruiru/ecommerce"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              E-Commerce
-            </a>
-            <p>
-              A website where admin users can add items with email and mpesa intergration.
-            </p>
-          </div>
-
-          <div>
-            <a 
-              href="https://github.com/MichaelWaruiru/qr-scanner"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="project-link"
-            >
-              QR Scanner
-            </a>
-            <p>
-              A project where users can scan a QR Code sending an OTP for M-Pesa payment.
-            </p>
-          </div>
-      
+          <button className="carousel-control-prev" type="button" data-bs-target="#projectsCarousel" data-bs-slide="prev">
+            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button className="carousel-control-next" type="button" data-bs-target="#projectsCarousel" data-bs-slide="next">
+            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+            <span className="visually-hidden">Next</span>
+          </button>
         </div>
       </div>
+
 
       <div className="contact-section" id="contact">
         <h2>Contact</h2>
