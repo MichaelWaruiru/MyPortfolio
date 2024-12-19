@@ -200,11 +200,15 @@ footer {
 }
 
 .project-card {
-  background-color: hsl(202, 15%, 85%);
+  background-color: hsl(300, 20%, 68%);
   border-radius: 10px;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+  margin: 0 auto;
+  width: 75%;
+  max-width: 80%;
 }
 
 .project-card:hover {
@@ -231,6 +235,12 @@ footer {
   background-color: #0056b3;
 }
 
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+  /* Makes the icons white */
+}
+
 @media screen and (max-width: 768px) {
   .card-container {
     flex-direction: column;
@@ -247,6 +257,10 @@ footer {
 
     .description:hover{
       clip-path: circle(100%);
+    }
+
+    .project-card {
+      width: 80%;
     }
 }
 
