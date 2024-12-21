@@ -162,8 +162,10 @@ function Card() {
 
       <div className="services-section" id="services">
         <h2>Services</h2>
+        <p>API Intergrations</p>
         <p>M-Pesa Intergrations</p>
-        <p>Websites Authentication & Security</p>
+        <p>Data Storage & Retrieval</p>
+        <p>Websites Scalability, Authentication & Security</p>
         <p>Database Architecture, Manipulation & Management</p>
       </div>
 
