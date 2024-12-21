@@ -186,6 +186,7 @@ footer {
 .about-section,
 .services-section,
 .projects-section {
+  text-align: center;
   text-indent: 30px;
   line-height: 1.8;
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -198,11 +199,7 @@ footer {
   font-size: 18px;
 }
 
-:is(.contact-section, .about-section, .services-section, .projects-section)>h2 {
-  text-align: center;
-}
-
-:is(.contact-section, .about-section, .services-section, .projects-section)>p {
+:is(.contact-section, .about-section, .projects-section)>p {
   text-align: start;
 }
 
