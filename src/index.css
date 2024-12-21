@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -74,7 +75,8 @@ body {
   margin-top: 90px;
 }
 
-.card:hover, .description:hover {
+.card:hover,
+.description:hover {
   clip-path: circle(100%);
 }
 
@@ -199,7 +201,7 @@ footer {
   font-size: 18px;
 }
 
-:is(.contact-section, .about-section, .projects-section)>p {
+:is(.about-section, .projects-section)>p {
   text-align: start;
 }
 
@@ -275,18 +277,18 @@ footer {
     width: 50%;
   } */
 
-    .description {
-      margin-top: 10px;
-      clip-path: circle(38% at 0 0);
-    }
+  .description {
+    margin-top: 10px;
+    clip-path: circle(38% at 0 0);
+  }
 
-    .description:hover{
-      clip-path: circle(100%);
-    }
+  .description:hover {
+    clip-path: circle(100%);
+  }
 
-    .project-card {
-      width: 80%;
-    }
+  .project-card {
+    width: 80%;
+  }
 }
 
 /* Smaller negative value on large screens */
@@ -320,7 +322,8 @@ nav {
 }
 
 .nav-link {
-  padding: 10px 20px; /* Add padding to ensure links are equally spaced */
+  padding: 10px 20px;
+  /* Add padding to ensure links are equally spaced */
   font-size: 1rem;
 }
 
