@@ -108,7 +108,7 @@ function Card() {
             <br />
             Sometimes I train models, mentally! I am a Machine Learning enthusiast because the future is AI. AIn't it? (See what I did there?😎)
             <br />
-            And no, I am not a  JavaScript fan but here I am with React😁
+            I explore frontend terminologies for the plot😁
           </p>
 
           {/* {isAdmin && (
