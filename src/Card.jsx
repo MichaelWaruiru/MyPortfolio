@@ -106,7 +106,7 @@ function Card() {
           <p className='description'>
             I am a backend developer with mastery in Go/Golang, Python (Django framework and Flask microframework).
             <br />
-            Sometimes I train models, mentally! I am a Machine Learning enthusiast because the future is AI. AIn't it? (See what I did there?😎)
+            Sometimes I train models, mentally! I have also delved deeper into Machine Learning because the future is AI. AIn't it? (See what I did there?😎)
             <br />
             I explore frontend terminologies for the plot😁
           </p>
@@ -154,8 +154,8 @@ function Card() {
         <h2>About Me</h2>
         <p>Hi, I am <strong>Michael Waruiru,</strong> a <strong>backend developer,</strong> based in Nairobi, Kenya.</p>
         <p>I have<strong> backend expertise</strong> which reflects my mastery in building robust, scalable, and efficient solutions. My technical proficiency spans across programming languages like <strong>Go/Golang</strong> and <strong>Python</strong>, where I leverage frameworks such as Django and Flask to create seamless web applications.</p>
-        <p>My curiosity and drive extend beyond backend systems—I'm an enthusiastic <strong>Machine Learning</strong> explorer who enjoys tackling challenges with data-driven insights. </p>
-        <p>While my primary focus lies in backend technologies, I also take pride in stepping into front-end frameworks like React, Vanilla Javascript, HTML and CSS to craft complete, well-rounded applications.</p>
+        <p>My curiosity and drive extend beyond backend systems—I've recently expanded my expertise to <strong>Machine Learning</strong> and <strong>Deep Learning</strong> using tools and frameworks like LangGraph and Tensorflow. </p>
+{/*         <p>While my primary focus lies in backend technologies, I also take pride in stepping into front-end frameworks like React, Vanilla Javascript, HTML and CSS to craft complete, well-rounded applications.</p> */}
         <p>I find joy in solving real-world problems, mentoring, and constantly learning to stay ahead in the fast-evolving tech landscape. Whether it's designing secure database architectures or integrating APIs for services like M-Pesa and Twilio, my goal is always to deliver solutions that empower businesses and individuals alike.</p>
         <p>Outside the world of coding, I live!</p>
       </div>
