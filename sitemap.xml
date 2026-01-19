@@ -3,19 +3,31 @@
   <url>
     <loc>https://michaelwaruiru.netlify.app/</loc>
     <lastmod>2024-10-26</lastmod>
-    <changefreq>always</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://michaelwaruiru.netlify.app/about</loc>
     <lastmod>2024-10-26</lastmod>
-    <changefreq>always</changefreq>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://michaelwaruiru.netlify.app/contact</loc>
-    <lastmod>2024-10-26</lastmod>
-    <changefreq>always</changefreq>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelwaruiru.netlify.app/services</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://michaelwaruiru.netlify.app/projects</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 </urlset>
