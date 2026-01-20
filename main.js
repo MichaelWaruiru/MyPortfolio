@@ -258,6 +258,29 @@
     document.documentElement.classList.add('reduce-motion');
   }
 
+  // SCROLL REVEAL (lazy-load style animation)
+  const revealEls = $$('.reveal');
+
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const revealObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target); // animate once
+        }
+      });
+    }, {
+      threshold: 0.15,
+      rootMargin: '0px 0px -60px 0px'
+    });
+
+    revealEls.forEach(el => revealObserver.observe(el));
+  } else {
+    // Fallback: show everything
+    revealEls.forEach(el => el.classList.add('is-visible'));
+  }
+  
+  // Footer year range
   const year = new Date().getFullYear();
   document.getElementById("footer-year").textContent = `2023 - ${year}`;
 })();
