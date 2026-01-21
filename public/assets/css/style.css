@@ -93,12 +93,43 @@ body{
 
 /* Hero */
 .hero{padding:4rem 0 2rem}
-.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:center}
+.hero-inner{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center}
 .hero-text h1{font-size:2rem;margin:0 0 .5rem;line-height:1.05}
 .subtitle{color:var(--muted);margin:0 0 1rem}
 .btn{display:inline-block;padding:.6rem 1rem;border-radius:10px;text-decoration:none}
 .btn.primary{background:linear-gradient(90deg,var(--accent-2),var(--accent));color:hsl(212, 88%, 7%);font-weight:700}
 .btn.ghost{border:1px solid hsla(0, 0%, 100%, 0.06);color:var(--muted);margin-left:.6rem}
+
+/* Hero visual with profile overlay */
+.hero-visual {
+  position: relative; /* REQUIRED for overlay */
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Profile image overlay */
+.hero-profile {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+
+  object-fit: cover;
+  border: 4px solid hsl(0, 0%, 100%);
+  box-shadow: 0 20px 40px hsla(0, 0%, 0%, 0.35);
+  z-index: 2;
+}
 
 /* Cards & sections */
 .section{padding:2.25rem 0}
@@ -188,6 +219,10 @@ footer {
   .nav-toggle{display:none}
   .primary-nav{display:block}
   .nav-list{flex-direction:row}
+  .hero-inner{grid-template-columns:1fr;gap:1.2rem}
+  .hero-visual {
+    max-width: 690px; /* caps size on large screens */
+  }
 }
 
 /* small micro-animations */
