@@ -156,7 +156,7 @@ body{
 .carousel-item{flex:0 0 100%;padding:1.25rem;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);outline:none;opacity:0;transform:scale(.99);transition:opacity .35s ease, transform .35s ease}
 .carousel-item.active{opacity:1;transform:scale(1)}
 .carousel-item h3{margin-top:0}
-.carousel-btn{background:hsla(0, 0%, 0%, 0.35);color:hsl(0, 0%, 100%);border:0;padding:.6rem;border-radius:10px;cursor:pointer}
+.carousel-btn{background:hsla(0, 0%, 0%, 0.35);color:hsl(0, 0%, 100%);border:0;padding:.6rem;border-radius:10px;cursor:pointer;margin:26px;}
 .carousel-btn:focus{box-shadow:0 0 0 3px hsla(213, 94%, 68%, 0.18)}
 .carousel-btn.prev{
   position:absolute;
