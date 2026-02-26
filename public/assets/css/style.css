@@ -62,6 +62,7 @@ body{
   justify-content:space-between;
   gap:var(--gap);
   padding:0.85rem 0;
+  position: relative;
 }
 .brand a{display:flex;align-items:center;gap:.6rem;text-decoration:none;color:inherit}
 .logo{
@@ -204,11 +205,23 @@ footer {
 /* Responsive */
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:1.2rem}
-  .primary-nav{display:none}
-  .primary-nav.show{display:block}
+  /* .primary-nav{display:none}
+  .primary-nav.show{display:block} */
   .nav-list{flex-direction:column;background:linear-gradient(180deg,hsla(0, 0%, 100%, 0.02),transparent);padding:1rem;border-radius:10px}
   .header-inner{align-items:center}
   .grid.cards{grid-template-columns:1fr}
+    .primary-nav {
+      position: absolute;
+      top: 100%;
+      /* just below header-inner */
+      right: 0;
+      left: 0;
+      background: linear-gradient(180deg, hsla(220, 49%, 8%, 0.9), hsla(220, 49%, 8%, 0.95));
+      padding: 1rem;
+      border-radius: 0 0 14px 14px;
+      border: 1px solid hsla(0, 0%, 100%, 0.05);
+      z-index: 999;
+    }
 
   /* Make carousel buttons and indicators easier to tap */
   .carousel-btn{padding:0.75rem;font-size:1.1rem}
