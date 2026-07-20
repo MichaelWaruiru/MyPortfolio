@@ -226,8 +226,6 @@ footer {
 /* Responsive */
 @media (max-width:900px){
   .hero-inner{grid-template-columns:1fr;gap:1.2rem}
-  /* .primary-nav{display:none}
-  .primary-nav.show{display:block} */
   .nav-list{flex-direction:column;background:linear-gradient(180deg,hsla(0, 0%, 100%, 0.02),transparent);padding:1rem;border-radius:10px}
   .header-inner{align-items:center}
   .grid.cards{grid-template-columns:1fr}
@@ -240,7 +238,7 @@ footer {
       background: linear-gradient(180deg, hsla(220, 49%, 8%, 0.9), hsla(220, 49%, 8%, 0.95));
       padding: 1rem;
       border-radius: 0 0 14px 14px;
-      border: 1px solid var(--border);
+      /* border: 1px solid var(--border); */
       z-index: 999;
       display:block;
       opacity:0;
