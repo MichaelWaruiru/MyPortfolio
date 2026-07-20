@@ -95,7 +95,7 @@ body{
   color: inherit;
   cursor: pointer;
   
-  /* Crucial updates for sensitivity */
+  /* Crucial for sensitivity */
   display: inline-flex;
   align-items: center;
   justify-content: center;
