@@ -1,15 +1,27 @@
-# React + Vite
+# Michael Waruiru Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a personal portfolio website built with simple static web technologies. It showcases the work, skills, and services of Michael Waruiru as a backend developer and machine learning engineer.
 
-Currently, two official plugins are available:
+## Project Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-#MyPortfolio
+- public/ - Main website files
+  - index.html - The homepage and content structure
+  - assets/css/style.css - Styling for the site
+  - assets/js/main.js - Interactive behavior such as navigation and the project carousel
+  - assets/images/ - Images used across the site
+  - robots.txt and sitemap.xml - SEO files
 
-## NOTE
-For Admin access to upload and delete files, make sure you use "?admin=true" after your URL i.e if it is "https://localhost:5173/?admin=true"
+## Features
 
-## ISSUES
-The resume link that is uploaded in cloudinary cannot be deleted or downloaded. Solution in progress albeit. 
+- Responsive layout for desktop and mobile
+- Sections for About, Services, Projects, and Contact
+- Interactive navigation and project showcase
+
+## How to View Locally
+
+1. Open the project folder in your browser, or use a local server such as Live Server in VS Code.
+2. Start from the homepage at public/index.html.
+
+## Notes
+
+This is a static website, so no build step is required.
