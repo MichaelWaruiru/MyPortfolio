@@ -182,6 +182,7 @@
     // Touch / pointer swipe support (small, resilient implementation)
     let startX = 0, dx = 0, pointerDown = false;
     track.addEventListener('pointerdown', (e) => {
+      if (e.target.closest('a')) return; // don't interfere with links
       pointerDown = true;
       startX = e.clientX;
       track.style.transition = 'none';
@@ -194,8 +195,15 @@
       track.style.transform = `translateX(calc(-${index * 100}% + ${percent}%))`;
     });
     track.addEventListener('pointerup', (e) => {
+      if (!pointerDown) return; // Safe guard check
+
       pointerDown = false;
       track.style.transition = '';
+
+      try {
+        track.releasePointerCapture(e.pointerId);
+      }
+      catch (err) {}
       const threshold = track.clientWidth * 0.15; // 15% swipe threshold
       if (dx > threshold) show(index - 1);
       else if (dx < -threshold) show(index + 1);
