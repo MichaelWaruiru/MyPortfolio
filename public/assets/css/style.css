@@ -245,7 +245,6 @@ footer {
     .primary-nav {
       position: absolute;
       top: 100%;
-      /* just below header-inner */
       right: 0;
       left: 0;
       background: linear-gradient(180deg, hsla(220, 49%, 8%, 0.9), hsla(220, 49%, 8%, 0.95));
