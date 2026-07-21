@@ -197,6 +197,10 @@ img{
   transform:translateY(-50%);
 }
 
+.carousel-item a{
+  color: yellow;
+}
+
 .carousel-btn.next{
   position:absolute;
   right:0;
