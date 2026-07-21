@@ -185,10 +185,10 @@ img{
 /* Projects carousel */
 .projects-carousel{position:relative;display:flex;align-items:center;overflow:hidden;gap:1rem;margin-top:1rem;flex-direction: column;text-align: center;background: var(--bg); border-radius: 8px; min-height: 250px; border:1px solid var(--border);}
 .carousel-track{list-style:none;padding:0;margin:0;display:flex;width:100%;transition:transform .45s ease;}
-.carousel-item{flex:0 0 100%;padding:1.25rem;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);outline:none;opacity:0;transform:scale(.99);transition:opacity .35s ease, transform .35s ease}
-.carousel-item.active{opacity:1;transform:scale(1)}
+.carousel-item{flex:0 0 100%;padding:1.25rem;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);outline:none;opacity:0;transform:scale(.99);transition:opacity .35s ease, transform .35s ease; pointer-events: none;}
+.carousel-item.active{opacity:1;transform:scale(1);pointer-events: auto;}
 .carousel-item h3{margin-top:0}
-.carousel-btn{background:hsla(0, 0%, 0%, 0.35);color:hsl(0, 0%, 100%);border:0;padding:.6rem;border-radius:10px;cursor:pointer;margin:26px;}
+.carousel-btn{background:hsla(0, 0%, 0%, 0.35);color:hsl(0, 0%, 100%);border:0;padding:.6rem;border-radius:10px;cursor:pointer;margin:26px;z-index: 10;}
 .carousel-btn:focus-visible{box-shadow:0 0 0 3px hsla(213, 94%, 68%, 0.18)}
 .carousel-btn.prev{
   position:absolute;
